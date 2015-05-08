@@ -1,13 +1,13 @@
 {
-  "name": "grunt-jsxhint",
-  "description": "jshint for jsx",
+  "name": "grunt-jsxhint-babel",
+  "description": "jshint for jsx using babel",
   "version": "0.6.0",
-  "homepage": "https://github.com/tillarnold/grunt-jsxhint",
+  "homepage": "https://github.com/Atsman/grunt-jsxhint",
   "author": "Till Arnold",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tillarnold/grunt-jsxhint.git"
+    "url": "https://github.com/Atsman/grunt-jsxhint.git"
   },
   "scripts": {
     "jshint": "jshint tasks/*"
@@ -35,6 +35,7 @@
     "jsx",
     "react",
     "jshint",
-    "jsxhint"
+    "jsxhint",
+    "babel"
   ]
 }

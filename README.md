@@ -20,14 +20,14 @@ grunt.loadNpmTasks('grunt-jsxhint');
 ```
 
 ## Jshint task
-This grunt plugin works exactly like [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint). In fact it's even using `grunt-contrib-jshint`. The only difference to `grunt-contrib-jshint` is that this plugin runs `require('react-tools').transform` on every file passed in. This will transform the jsx syntax to regular JavaScript. Non jsx-files will be unchanged. Line numbers are preserved by jsx so the line numbers outputted by jshint will be correct.
+This grunt plugin works exactly like [grunt-contrib-jshint](https://github.com/gruntjs/grunt-contrib-jshint). In fact it's even using `grunt-contrib-jshint`. The only difference to `grunt-contrib-jshint` is that this plugin runs `require('babel').transform` on every file passed in. This will transform the jsx syntax to regular JavaScript. Non jsx-files will be unchanged. Line numbers are preserved by jsx so the line numbers outputted by jshint will be correct.
 
 This is a drop in replacement for `grunt-contrib-jshint`. So you can just replace the `grunt-contrib-jshint` dependency in your `package.json` with `grunt-jsxhint`.
 
-`grunt-jsxhint` needs `react-tools` to work. If you don't have `react-tools` installed run
+`grunt-jsxhint-babel` needs `babel` to work. If you don't have `babel` installed run
 
 ```shell
-npm install react-tools --save-dev
+npm install babel --save-dev
 ```
 
 
