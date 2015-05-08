@@ -2,17 +2,16 @@ var rewire = require('rewire');
 var proxyquire = require('proxyquire');
 
 try {
-  var react = require('react-tools');
+  var babel = require('babel');
 } catch (e) {
-  throw new Error('grunt-jsxhint: The module `react-tools` was not found. ' +
-    'To fix this error run `npm install react-tools --save-dev`.', e);
+  throw new Error('grunt-jsxhint: The module `babel` was not found. ' +
+    'To fix this error run `npm install babel --save-dev`.', e);
 }
 
 var jshintcli = rewire('jshint/src/cli');
 
 //Get the original lint function
 var origLint = jshintcli.__get__('lint');
-
 
 function endsWith(string, suffix) {
   return string.indexOf(suffix, string.length - suffix.length) !== -1;
@@ -56,7 +55,7 @@ module.exports = function (grunt) {
       var compiled;
 
       try {
-        compiled = react.transform(code);
+        compiled = babel.transform(code).code;
       } catch (err) {
         throw new Error('grunt-jsxhint: Error while running JSXTransformer on ' + file + '\n' + err.message);
       }
